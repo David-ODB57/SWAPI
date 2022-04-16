@@ -7,17 +7,18 @@ Réalisé dans le cadre de ma formation en cours de javascript avancé.
 
 Requiert Node.js
 
-- Vous rendre dans le dossier où vous voulez installer le projet
-```bash
-C:\USers\Steve\Desktop\swapi
-```
 - cloner le projet
 ```bash
 git clone url of project
 ```
+- Vous rendre dans le dossier où vous avez installé le projet
+```bash
+C:\USers\Steve\Desktop\
+cd swapi
+```
 - installer les dépendances
 ```bash
-npm install --save
+npm install
 ```
 - Lance le serveur
 ```bash
