@@ -46,15 +46,13 @@ export class Weather {
     let image;
     let planetName;
 
-    if (main === "Clear") {
-      if (temp > 20 && temp < 30) {
-        planetName = "Coruscant";
-        let time = new Date().getHours();
+    if (main === "Clear" && temp >= 20 && temp <= 30) {
+      planetName = "Coruscant";
+      let time = new Date().getHours();
 
-        time > 18
-          ? (image = `<img id="bck" src="http://localhost:3000/weather/coruscant-night.jpg" alt="${planetName} par nuit claire" />`)
-          : (image = `<img id="bck" src="http://localhost:3000/weather/coruscant-day.jpg" alt="${planetName} par jour clair" />`);
-      }
+      time > 18
+        ? (image = `<img id="bck" src="http://localhost:3000/weather/coruscant-night.jpg" alt="${planetName} par nuit claire" />`)
+        : (image = `<img id="bck" src="http://localhost:3000/weather/coruscant-day.jpg" alt="${planetName} par jour clair" />`);
     } else {
       planetName = "Naboo";
       image = `<img id="bck" src="http://localhost:3000/weather/naboo.jpg" alt="image de ${planetName}" />`;
