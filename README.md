@@ -26,7 +26,7 @@ npm run start
 - Ouvrir le projet dans votre navigateur
 (CTRL + click sur l'adresse dans le terminal sous VSCode)
 ```bash
-Server SWAPI listening on port: http://localhost:3000 !
+Server SWAPI listening on port: http://localhost:3000
 ```
 
 ## Description
