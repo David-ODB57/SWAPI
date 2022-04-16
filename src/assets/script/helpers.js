@@ -1,3 +1,5 @@
+import { Weather } from "./classes/class.weather.js";
+
 export function addButton(items) {
   let buttons = [];
   items.forEach((item) => {
@@ -36,5 +38,19 @@ export function randomStar(numberOfStars, appRoot) {
     star.style.top = `${starPosition[0]}px`;
     star.style.left = `${starPosition[1]}px`;
     appRoot.appendChild(star);
+  }
+}
+
+export function weatherLoc() {
+  const rootElm = document.querySelector("header");
+  const p = document.createElement("p");
+
+  if (!navigator.geolocation) {
+    p.textContent = "Geolocation indisponible sur votre navigateur";
+    rootElm.appendChild(p);
+  } else {
+    navigator.geolocation.getCurrentPosition((pos) => {
+      new Weather(pos.coords.latitude, pos.coords.longitude);
+    });
   }
 }
