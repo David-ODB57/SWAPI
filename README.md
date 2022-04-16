@@ -9,7 +9,7 @@ Requiert Node.js
 
 - cloner le projet
 ```bash
-git clone url of project
+git clone url du project
 ```
 - Vous rendre dans le dossier où vous avez installé le projet
 ```bash
