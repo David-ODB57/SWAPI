@@ -13,20 +13,20 @@ C:\USers\Steve\Desktop\cd swapi
 ```
 - cloner le projet
 ```bash
-git clone url du project
+C:\USers\Steve\Desktop\swapi\git clone url du project
 ```
 - installer les dépendances
 ```bash
-npm install
+C:\USers\Steve\Desktop\swapi\npm install
 ```
 - Lance le serveur
 ```bash
-npm run start
+C:\USers\Steve\Desktop\swapi\npm run start
 ```
 - Ouvrir le projet dans votre navigateur
 (CTRL + click sur l'adresse dans le terminal sous VSCode)
 ```bash
-Server SWAPI listening on port: http://localhost:3000
+C:\USers\Steve\Desktop\swapi\Server SWAPI listening on port: http://localhost:3000
 ```
 
 ## Description
