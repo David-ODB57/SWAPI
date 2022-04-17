@@ -24,10 +24,7 @@ export class Card {
   }
 
   render() {
-    return `<div class="loader">
-              <i class="fab fa-galactic-republic fa-spin fa-4x"></i>
-            </div>
-            <img src="${this.imageUrl}" alt="${this.cardName}" onload = "${this.isLoaded}">
+    return `<img src="${this.imageUrl}" alt="${this.cardName}">
             <div class="card-title">
               <h2>${this.cardName}</h2>
             </div>`;
