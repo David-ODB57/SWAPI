@@ -20,7 +20,7 @@ export class Card {
   }
 
   set imageUrl(url) {
-    this._imgUrl = url;
+    this.#imgUrl = url;
   }
 
   render() {
