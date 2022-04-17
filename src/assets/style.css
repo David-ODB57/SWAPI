@@ -5,11 +5,13 @@
       url("./fonts/STARWARS.ttf") format("truetype"),
       url("./fonts/STARWARS.svg") format("svg");
 }
-
 :root {
   --sw-text-color: #feda4a;
 }
 
+/*************************/
+/* CONFIGURATION GENERAL */
+/*************************/
 *,
 *::before,
 *::after {
@@ -45,18 +47,41 @@ width: 5px;
   background-color: var(--sw-text-color);
   border-radius: 15px;
 }
+header {
+  width: 100%;
+  font-size: calc(0.75em + 1vmax);
+  text-align: center;
+  padding: 5vw 0;
+}
+header h1 {
+  text-decoration: underline;
+}
+#links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#links a {
+  font-size: 5vh;
+  color: var(--sw-text-color);
+}
+h1.title,
+h2 {
+  color: var(--sw-text-color);
+}
 
+/*****************************/
+/* CONFIGURATION INDEX.HTML  */
+/*****************************/
 .main-container {
   width: 100%;
 }
-
 #start-app {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
-
 #start-app button {
   cursor: pointer;
   padding: 5px 15px;
@@ -68,7 +93,6 @@ width: 5px;
   font-size: 2vw;
   transition: all 0.3s;
 }
-
 #start-app button:hover, #start-app button:focus {
   outline: none;
   letter-spacing: 8px;
@@ -77,7 +101,66 @@ width: 5px;
               inset 0 0 1em 0.2em #15f2fd;
   border: 1px solid white;
 }
-
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  border-radius: 5px;
+  background: white;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  z-index: 100;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border-color: black;
+  background: #15f2fd;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #15f2fd;
+}
+input[type="range"]::-moz-range-thumb:after {
+content: '';
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border-color: black;
+  background: #15f2fd;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #15f2fd;
+  z-index: 1000;
+}
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border-color: white;
+  background: #15f2fd;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #15f2fd;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: 0 0 1em 5px #15f2fd;
+  border: none;
+  background: transparent;
+  filter: blur(1px);
+}
+input[type="range"]::-moz-range-track {
+  -webkit-appearance: none;
+  box-shadow: 0 0 1em 5px #15f2fd;
+  border: none;
+  border-radius: 15px;
+  background: transparent;
+  filter: blur(1px);
+}
 .stars {
   position: absolute;
   width: 1px;
@@ -85,7 +168,6 @@ width: 5px;
   background-color: white;
   z-index: 2;
 }
-
 .intro {
   position: absolute;
   top: 0;
@@ -95,13 +177,12 @@ width: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 200%;
+  font-size: 3vw;
   font-weight: 400;
   color: rgb(75, 213, 238);
   opacity: 0;
   animation: intro 6s ease-out 1s;
 }
-
 .logo {
   position: absolute;
   top: 0;
@@ -114,11 +195,9 @@ width: 5px;
   align-items: center;
   animation: logo 9s ease-out 9s;
 }
-
 .logo svg {
   width: inherit;
 }
-
 .fade {
   position: relative;
   width: 100%;
@@ -161,36 +240,9 @@ width: 5px;
   margin: 0 0 100px;
   text-transform: uppercase;
 }
-
-main {
-  padding: 0 15vw;
-}
-header {
-  width: 100%;
-  font-size: calc(0.75em + 1vmax);
-  text-align: center;
-  padding: 5vw 0;
-}
-header h1 {
-  text-decoration: underline;
-}
-#links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-#links a {
-  font-size: 5vh;
-  color: var(--sw-text-color);
-}
-h1.title,
-h2 {
-  color: var(--sw-text-color);
-}
-
 nav {
   position: fixed;
-  top:90%;
+  top: 90%;
   font-size: 25%;
   width: 100%;
   display: flex;
@@ -202,7 +254,6 @@ nav a {
   opacity: 0;
   animation: lightSpeed .5s ease-in 50s forwards;
 }
-
 nav a.button {
   position: relative;
   font-size: 2vmax;
@@ -214,9 +265,9 @@ nav a.button {
   border-radius: 5px;
   letter-spacing: 6px;
   text-shadow: 0 0 0.125em currentColor,
-                0 0 0.45em currentColor;
+    0 0 0.45em currentColor;
   box-shadow: inset 0 0 0.5em 0 currentColor,
-                    0 0 0.5em 0 currentColor;
+    0 0 0.5em 0 currentColor;
   opacity: 0;
   animation: lightSpeed 1s ease-in 60s forwards;
   transition: all 0.3s;
@@ -247,7 +298,6 @@ nav a.button::after {
   z-index: -1;
   transition: opacity 100ms linear;
 }
- 
 nav a.button:hover,
 nav a.button:focus {
   outline: none;
@@ -261,10 +311,24 @@ nav a.button:hover::after,
 nav a.button:focus::after {
   opacity: 1;
 }
-nav a.button + a.button {
+nav a.button+a.button {
   margin-left: 5vmax;
 }
 
+/****************/
+/** PAGE LISTE **/
+/****************/
+#layout-grid-list {
+  min-height: 100vh;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  padding: 0 15vw;
+  padding-block: 2rem;
+  margin-inline: auto;
+}
 .card {
   position: relative;
   display: flex;
@@ -287,22 +351,10 @@ nav a.button + a.button {
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 0 0 5px black;
-  color: #feda4a;
+  color: var(--sw-text-color);
   filter: brightness(1) grayscale(0);
   transition: all ease-in-out 0.3s;
 }
-
-#layout-grid-list {
-  min-height: 100vh;
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-  grid-auto-rows: auto;
-  grid-auto-flow: dense;
-  padding-block: 2rem;
-  margin-inline: auto;
-}
-
 button {
   line-height: 1.6;
 }
@@ -310,7 +362,7 @@ button#add-item {
   font-size: 2vw;
 }
 .card:hover .card-title {
-  color: #feda4a;
+  color: var(--sw-text-color);
   transform: translateY(-100%);
 }
 .card img {
@@ -334,16 +386,17 @@ button#add-item {
   box-shadow: inset 0 0 30px 5px #03e9f4;
 }
 
-/****************/
-/* PAGE DETAILS */
-/****************/
+/******************/
+/** PAGE DETAILS **/
+/******************/
 #section-content {
   position: relative;
 }
-main#details {
+#details {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 0 15vw;
 }
 .container {
   display: flex;
@@ -372,42 +425,26 @@ main#details {
   flex-wrap: wrap;
   margin: 5px 0; 
 }
-
-.content p {
-
-}
 span.categorie {
   font-size: clamp(0.8rem, 4.5vw + 1vmax, 3.5vw);
   color: var(--sw-text-color);
   text-decoration: underline;
   text-transform: uppercase;
 }
-
 span.info {
   font-size: clamp(0.8rem, 4vw + 1vmax, 2.5vw);
   display: inline-block;
   color: white;
 }
-
 span + span {
   margin-left: 1.5vmax;
-}
-
-.message {
-  display: flex;
-  justify-content: center;
-  font-size: 2em;
-}
-
-.message.succes {
-  color: rgb(149, 223, 39);
 }
 
 hr {
   display: flex;
   width: 50%;
   margin: 1rem 0;
-  color: #feda4a;
+  color: var(--sw-text-color);
   transform: translateX(50%);
   transition: all 0.3s;
 }
@@ -445,6 +482,9 @@ hr {
   letter-spacing: 3px;
 }
 
+/************************/
+/** CONFIGURATION FORM **/
+/************************/
 form {
   display: flex;
   flex-direction: column;
@@ -453,7 +493,7 @@ form {
   min-height: 100vh;
   padding: 0 5vw;
 }
-label, input {
+label, input[type="text"] {
   width: fit-content;
 }
 label {
@@ -461,20 +501,19 @@ label {
   font-size: calc(0.75em + .5vmax);
   padding: .7rem;
 }
-input {
+input[type="text"] {
   min-width: 20vw;
   padding: 10px;
   border-radius: 10px;
   font-size: calc(0.35em + .5vmax);
-  box-shadow: 0 0 15px #feda4a,
-              0 0 15px #feda4a;
+  box-shadow: 0 0 15px var(--sw-text-color),
+              0 0 15px var(--sw-text-color);
   border: none;
 }
-input:focus {
+input[type="text"]:focus {
   outline: #000;
-  background: #feda4a;
+  background: var(--sw-text-color);
 }
-
 .input-content {
   display: flex;
   flex-direction: column;
@@ -540,25 +579,28 @@ form button:hover {
   color: #e91e63;
 }
 
-@media screen and (min-width: 45em) {
-  .card:nth-child(2n) {
-    grid-column: span 2;
-  }
-  .card:nth-child(4n - 1) {
-    grid-column: 4;
-    grid-row: span 2;
-  }
-  .card:nth-child(4n) {
-    grid-row: span 2;
-  }
-  .card:nth-child(7n) {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-}
 /****************************/
 /******** WEATHER APP *******/
 /****************************/
+button#geolocalisation {
+  cursor: pointer;
+  color: #2FF924;
+  background-color: transparent;
+  border: 2px solid #2FF924;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.7vw;
+  transition: all 0.3s;
+  text-shadow: 0 0 0.125em currentColor,
+    0 0 0.45em currentColor;
+  text-transform: uppercase;
+}
+button#geolocalisation:hover {
+  letter-spacing: 6px;
+  text-shadow: unset;
+  box-shadow: inset 0 0 0.5em 0 currentColor,
+    0 0 0.5em 0 currentColor;
+}
 .weather-app {
   position: relative;
   margin-top: 2vw;
@@ -615,14 +657,37 @@ form button:hover {
   font-weight: 600;
 }
 
+/*******************/
+/** MEDIA QUERIES **/
+/*******************/
 @media screen and (max-width: 37em) {
   .actions {
     flex-direction: column;
   }
 }
-/**************************/
-/******** ANIMATION *******/
-/**************************/
+@media screen and (min-width: 45em) {
+  .card:nth-child(2n) {
+    grid-column: span 2;
+  }
+
+  .card:nth-child(4n - 1) {
+    grid-column: 4;
+    grid-row: span 2;
+  }
+
+  .card:nth-child(4n) {
+    grid-row: span 2;
+  }
+
+  .card:nth-child(7n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+/****************/
+/** ANIMATIONS **/
+/****************/
 @keyframes intro {
   0% {
     opacity: 0;
@@ -641,7 +706,6 @@ form button:hover {
     visibility: hidden;
   }
 }
-
 @keyframes logo {
   0% {
     transform: scale(2.75);
@@ -657,7 +721,6 @@ form button:hover {
     opacity: 0;
   }
 }
-
 @keyframes show {
   0% {
     opacity: 0;
@@ -676,6 +739,17 @@ form button:hover {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
     visibility: visible;
+  }
+}
+@keyframes vibrant {
+  from {
+    box-shadow: 0 0 10px #3784d6;
+  }
+  50% {
+    box-shadow: 0 0 16px #3784d6;
+  }
+  to {
+    box-shadow: 0 0 10px #3784d6;
   }
 }
 @keyframes modalFadeIn {
@@ -720,18 +794,16 @@ form button:hover {
     transform: translate3d(-100%, 0, 0) skewX(30deg);
     opacity: 0;
   }
-
   60% {
     -webkit-transform: skewX(-20deg);
     transform: skewX(-20deg);
   }
-  
+
   80% {
     -webkit-transform: skewX(5deg);
     transform: skewX(5deg);
     opacity: 1;
   }
-
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
