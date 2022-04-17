@@ -1,6 +1,6 @@
 import { Weather } from "./classes/class.weather.js";
 
-export function addButton(items) {
+export function addMenuButton(items) {
   let buttons = [];
   items.forEach((item) => {
     let a = document.createElement("a");
