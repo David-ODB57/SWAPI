@@ -28,6 +28,16 @@ export class Intro {
       .addEventListener("click", () => {
         this.el.innerHTML += this.#render();
         document.querySelector("#start-app").style.display = "none";
+        document
+            .querySelector('input[type="range"]')
+            .addEventListener("input", (e) => {
+              const min = e.target.min;
+              const max = e.target.max;
+              const val = e.target.value;
+              e.target.style.backgroundSize =
+                ((val - min) * 100) / (max - min) + "% 100%";
+              document.querySelector("audio").volume = val / 10;
+            });
         setTimeout(() => document.querySelector("audio").play(), 8500);
       });
   }
@@ -37,6 +47,7 @@ export class Intro {
                 <audio preload="auto">
                     <source src="http://localhost:3000/audio/intro.mp3" type="audio/mp3" />
                 </audio>
+                <input type="range" min="0" max="1" step="0.1" value="1" />
                 <div class="animation">
                     <section class="intro">
                         A long time ago, in a galaxy far,<br />
