@@ -7,14 +7,14 @@ Réalisé dans le cadre de ma formation en cours de javascript avancé.
 
 Requiert Node.js
 
-- cloner le projet
-```bash
-git clone url du project
-```
-- Vous rendre dans le dossier où vous avez installé le projet
+- Vous rendre dans le dossier où vous voulez installer le projet
 ```bash
 C:\USers\Steve\Desktop\
 cd swapi
+```
+- cloner le projet
+```bash
+git clone url du project
 ```
 - installer les dépendances
 ```bash
