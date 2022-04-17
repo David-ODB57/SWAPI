@@ -24,6 +24,7 @@ export function getAllItems(url, options) {
           div.setAttribute("id", "card-r2-d2");
           div.appendChild(audio);
           div.addEventListener("mouseenter", () => {
+            audio.volume = 0.1;
             audio.load();
             audio.play();
           });
@@ -37,6 +38,7 @@ export function getAllItems(url, options) {
           div.setAttribute("id", "card-vader");
           div.appendChild(audio);
           div.addEventListener("mouseenter", () => {
+            audio.volume = 0.1;
             audio.load();
             audio.play();
           });
@@ -50,6 +52,7 @@ export function getAllItems(url, options) {
           div.setAttribute("id", "card-Chewbacca");
           div.appendChild(audio);
           div.addEventListener("mouseenter", () => {
+            audio.volume = 0.1;
             audio.load();
             audio.play();
           });
