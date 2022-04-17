@@ -9,8 +9,7 @@ Requiert Node.js
 
 - Vous rendre dans le dossier où vous voulez installer le projet
 ```bash
-C:\USers\Steve\Desktop\
-cd swapi
+C:\USers\Steve\Desktop\cd swapi
 ```
 - cloner le projet
 ```bash
