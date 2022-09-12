@@ -3,6 +3,15 @@
 ## Contexte
 Réalisé dans le cadre de ma formation en cours de javascript avancé.
 
+## Description
+Petite application permettant d'afficher une liste de personnages de Star Wars.
+
+On peut ajouter, modifier, mettre à jour ou supprimer des personnages.
+
+Elle a été réalisé à l'aide de NodeJS et du framework Express.
+
+Openweather a été également inclus dans l'application avec une customisation ![Star Wars](https://github.com/pulkit-jasti/Star-Wars-Weather-App).
+
 ## Installation
 
 Requiert Node.js
@@ -28,11 +37,3 @@ C:\Users\Steve\Desktop\swapi\npm run start
 ```bash
 C:\Users\Steve\Desktop\swapi\Server SWAPI listening on port: http://localhost:3000
 ```
-
-## Description
-
-Petite application permettant d'afficher une liste de personnages de Star Wars.
-On peut ajouter, modifier, mettre à jour ou supprimer des personnages.
-Elle a été réalisé à l'aide de NodeJS et du framework Express.
-Openweather a été également inclus dans l'application avec une custumisation [Star Wars](https://github.com/pulkit-jasti/Star-Wars-Weather-App).
-
