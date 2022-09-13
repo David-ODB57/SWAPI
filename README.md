@@ -32,8 +32,8 @@ C:\Users\Steve\Desktop\swapi\npm install
 ```bash
 C:\Users\Steve\Desktop\swapi\npm run start
 ```
-- Ouvrir le projet dans votre navigateur
-(CTRL + click sur l'adresse dans le terminal sous VSCode)
 ```bash
 C:\Users\Steve\Desktop\swapi\Server SWAPI listening on port: http://localhost:3000
 ```
+- Ouvrir le projet dans votre navigateur
+(CTRL + click sur l'adresse dans le terminal sous VSCode)
